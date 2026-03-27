@@ -319,8 +319,8 @@
   </div>
 
   <!-- Form -->
-  <form id="app-form" class="form-card" name="تحدي-30-يوم" method="POST" data-netlify="true" onsubmit="submitForm(event)" novalidate>
-    <input type="hidden" name="form-name" value="تحدي-30-يوم">
+  <form id="app-form" class="form-card" name="challenge-application" method="POST" data-netlify="true" onsubmit="submitForm(event)" novalidate>
+    <input type="hidden" name="form-name" value="challenge-application">
 
     <!-- ── Section 1: Personal Info ── -->
     <div class="form-section">
@@ -332,18 +332,18 @@
       <div class="grid2">
         <div class="field">
           <label>الاسم الكامل <span class="req">*</span></label>
-          <input type="text" id="name" name="الاسم-الكامل" placeholder="مثال: سارة أحمد" required>
+          <input type="text" id="name" name="full-name" placeholder="مثال: سارة أحمد" required>
         </div>
         <div class="field">
           <label>العمر <span class="req">*</span></label>
-          <input type="number" id="age" name="العمر" placeholder="22" min="18" max="35" required>
+          <input type="number" id="age" name="age" placeholder="22" min="18" max="35" required>
         </div>
       </div>
 
       <div class="grid2">
         <div class="field">
           <label>الجنس <span class="req">*</span></label>
-          <select id="gender" name="الجنس" required>
+          <select id="gender" name="gender" required>
             <option value="" disabled selected>اختر</option>
             <option value="male">ذكر</option>
             <option value="female">أنثى</option>
@@ -351,24 +351,24 @@
         </div>
         <div class="field">
           <label>الجنسية <span class="req">*</span></label>
-          <input type="text" id="nationality" name="الجنسية" placeholder="مثال: أردني، فلسطيني، سوري" required>
+          <input type="text" id="nationality" name="nationality" placeholder="مثال: أردني، فلسطيني، سوري" required>
         </div>
       </div>
 
       <div class="grid2">
         <div class="field">
           <label>بلد الإقامة الحالي <span class="req">*</span></label>
-          <input type="text" id="residence" name="بلد-الإقامة" placeholder="مثال: الأردن، الإمارات، فلسطين" required>
+          <input type="text" id="residence" name="residence" placeholder="مثال: الأردن، الإمارات، فلسطين" required>
         </div>
         <div class="field">
           <label>رقم الواتساب <span class="req">*</span> <span class="hint">(للتواصل فقط)</span></label>
-          <input type="tel" id="phone" name="رقم-الواتساب" placeholder="+962 79 000 0000" required>
+          <input type="tel" id="phone" name="whatsapp" placeholder="+962 79 000 0000" required>
         </div>
       </div>
 
       <div class="field">
         <label>حساب إنستغرام <span class="hint">(اختياري)</span></label>
-        <input type="text" id="instagram" name="حساب-إنستغرام" placeholder="@username">
+        <input type="text" id="instagram" name="instagram" placeholder="@username">
       </div>
     </div>
 
@@ -384,11 +384,11 @@
       <div class="grid2">
         <div class="field">
           <label>التخصص الدراسي <span class="req">*</span></label>
-          <input type="text" id="major" name="التخصص" placeholder="مثال: إدارة أعمال، هندسة حاسوب" required>
+          <input type="text" id="major" name="major" placeholder="مثال: إدارة أعمال، هندسة حاسوب" required>
         </div>
         <div class="field">
           <label>سنة التخرج <span class="req">*</span></label>
-          <select id="grad-year" name="سنة-التخرج" required>
+          <select id="grad-year" name="grad-year" required>
             <option value="" disabled selected>اختر</option>
             <option>2026</option>
             <option>2025</option>
@@ -399,7 +399,7 @@
 
       <div class="field">
         <label>المسمى الوظيفي اللي بتدور عليه <span class="req">*</span></label>
-        <input type="text" id="job-title" name="المسمى-الوظيفي" placeholder="مثال: محلل بيانات، مسوّق رقمي، مهندس برمجيات" required>
+        <input type="text" id="job-title" name="job-title" placeholder="مثال: محلل بيانات، مسوّق رقمي، مهندس برمجيات" required>
       </div>
 
       <div class="field">
@@ -424,7 +424,7 @@
 
       <div class="field">
         <label>قديش صار إلك وانت بتدور على شغل؟ <span class="req">*</span></label>
-        <select id="search-duration" name="مدة-البحث" required>
+        <select id="search-duration" name="search-duration" required>
           <option value="" disabled selected>اختر</option>
           <option>أقل من شهر</option>
           <option>1 إلى 3 أشهر</option>
@@ -435,7 +435,7 @@
 
       <div class="field">
         <label>كم طلب توظيف قدّمت تقريباً؟ <span class="req">*</span></label>
-        <select id="apps-count" name="عدد-الطلبات" required>
+        <select id="apps-count" name="apps-count" required>
           <option value="" disabled selected>اختر</option>
           <option>أقل من 10</option>
           <option>10 إلى 30</option>
@@ -516,7 +516,7 @@
 
       <div class="field">
         <label>أي إشي ثاني بدك تحكيه؟ <span class="hint">(اختياري)</span></label>
-        <textarea id="extra" name="ملاحظات-إضافية" placeholder="أي شي بتحس إنه مهم نعرفه عنك..." maxlength="300" oninput="countChars(this, 'extra-count', 300)"></textarea>
+        <textarea id="extra" name="extra-notes" placeholder="أي شي بتحس إنه مهم نعرفه عنك..." maxlength="300" oninput="countChars(this, 'extra-count', 300)"></textarea>
         <div class="char-counter" id="extra-count">0 / 300</div>
       </div>
 
@@ -551,11 +551,9 @@
       const form = document.getElementById('app-form');
       let valid = true;
 
-      // Reset styles
       form.querySelectorAll('input, select, textarea').forEach(el => { el.style.borderColor = ''; });
       form.querySelectorAll('.radio-item, .check-item').forEach(el => { el.style.outline = ''; });
 
-      // Required text/select/textarea fields
       form.querySelectorAll('[required]').forEach(el => {
         if (el.type === 'checkbox') {
           if (!el.checked) { el.parentElement.style.outline = '2px solid #e84040'; el.parentElement.style.borderRadius = '6px'; valid = false; }
@@ -564,7 +562,6 @@
         }
       });
 
-      // Required radio groups
       ['experience','interviews','hours'].forEach(name => {
         if (!form.querySelector(`input[name="${name}"]:checked`)) {
           valid = false;
@@ -581,7 +578,6 @@
         return;
       }
 
-      // Submit to Netlify
       const btn = form.querySelector('.submit-btn');
       btn.textContent = 'جاري الإرسال...';
       btn.disabled = true;
@@ -593,11 +589,15 @@
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString()
       })
-      .then(() => {
-        form.style.display = 'none';
-        const done = document.getElementById('done-screen');
-        done.style.display = 'block';
-        done.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      .then(res => {
+        if (res.ok) {
+          form.style.display = 'none';
+          const done = document.getElementById('done-screen');
+          done.style.display = 'block';
+          done.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          throw new Error('Server error');
+        }
       })
       .catch(() => {
         btn.textContent = 'إرسال التقديم';
